@@ -1,10 +1,13 @@
 import kotlin.math.pow
 
 fun main() {
-    Zadanie1()
-    Zadanie2()
-    Zadanie3()
-    Zadanie4()
+//    Zadanie1()
+//    Zadanie2()
+//    Zadanie3()
+//    Zadanie4()
+//    Zadanie5()
+    Zadanie6()
+
 }
 
 fun Zadanie1(){ // вариант 18
@@ -67,33 +70,64 @@ fun Zadanie3() {
         println("вы ввели не число")
     }
 }
-    fun Zadanie4(){
-        try {
-            println("введите возраст")
-            val x: Int = readln().toInt()
-            if (x < 0)
-                println("возраст должен быть минимум равен 0")
-            else {
-                when (x) {
+fun Zadanie4(){
+    try {
+        println("введите возраст")
+        val x: Int = readln().toInt()
+        if (x < 0)
+            println("возраст должен быть минимум равен 0")
+        else {
+            when (x) {
 
-                    in 0..2 -> println("младенец")
-                    in 3..13 -> println("ребенок")
-                    in 14..17 -> println("подросток")
-                    in 18..55 -> println("взрослый")
-                    in 56..90 -> println("старый")
-                    in 91..122 -> println("долгожитель")
-                    else -> println("новый рекордный возраст человека")
+                in 0..2 -> println("младенец")
+                in 3..13 -> println("ребенок")
+                in 14..17 -> println("подросток")
+                in 18..55 -> println("взрослый")
+                in 56..90 -> println("старый")
+                in 91..122 -> println("долгожитель")
+                else -> println("новый рекордный возраст человека")
 
-                }
             }
-        } catch (e: Exception) {
-            println("вы ввели не число")
+        }
+    } catch (e: Exception) {
+        println("вы ввели не число")
+    }
+}
+fun Zadanie5(){
+    try {
+        println("Введите число")
+        val num: Int = readln().toInt()
+        if (num == 0)
+            println("нулевое число")
+        else {
+            if (num < 0)
+                print("Отрицательное ")
+            else
+                print("Положительное ")
+
+            if (num % 2 == 0)
+                print("четное число")
+            else
+                print("нечетное число")
         }
     }
-
-
-
-
-
-
+    catch(e:Exception){
+        println("Вы ввели не число")
+    }
+}
+fun Zadanie6(){
+    try{
+    println("Введите год")
+    val year: Int = readln().toInt()
+    if(year%100==0 && year%400==0)
+        println("Високосный")
+    else if(year%4==0 && year%100!=0)
+        println("Високосный")
+    else
+        println("невисокосный")
+    }
+    catch(e:Exception){
+        println("вы ввели не число")
+    }
+}
 
