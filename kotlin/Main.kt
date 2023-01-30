@@ -19,10 +19,13 @@ fun Zadanie1(){ // вариант 18
         else
             x = 1/(x.pow(4)-6)
         println(x)
+
+
     }
     catch(e: Exception){
         println("Вы ввели не число")
     }
+
 }
 fun Zadanie2(){
     try {
@@ -42,6 +45,9 @@ fun Zadanie2(){
     catch(e:Exception){
         println("вы ввели не число")
     }
+
+
+
 }
 fun Zadanie3() {
     try {
