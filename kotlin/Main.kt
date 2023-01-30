@@ -13,25 +13,23 @@ fun main() {
 fun Zadanie1(){ // вариант 18
     try {
         println("Введите число x")
-        var x: Double = readln().toDouble()
+
+        var x: Double = readLine()!!.toDouble()
         if(x>=8) x = -(x.pow(2))+x-9
         else
             x = 1/(x.pow(4)-6)
         println(x)
-
-
     }
     catch(e: Exception){
         println("Вы ввели не число")
     }
-
 }
 fun Zadanie2(){
     try {
         println("введите первое число")
-        var firstnumber: Double = readln().toDouble()
+        var firstnumber: Double = readLine()!!.toDouble()
         println("введите второе число")
-        var secondnumber: Double = readln().toDouble()
+        var secondnumber: Double = readLine()!!.toDouble()
         if (firstnumber > secondnumber)
             secondnumber++
         else
@@ -44,14 +42,11 @@ fun Zadanie2(){
     catch(e:Exception){
         println("вы ввели не число")
     }
-
-
-
 }
 fun Zadanie3() {
     try {
         println("введите цифру")
-        val x: Int = readln().toInt()
+        val x: Int = readLine()!!.toInt()
         when (x) {
             0 -> println("ноль")
             1 -> println("один")
@@ -73,7 +68,7 @@ fun Zadanie3() {
 fun Zadanie4(){
     try {
         println("введите возраст")
-        val x: Int = readln().toInt()
+        val x: Int = readLine()!!.toInt()
         if (x < 0)
             println("возраст должен быть минимум равен 0")
         else {
@@ -96,7 +91,7 @@ fun Zadanie4(){
 fun Zadanie5(){
     try {
         println("Введите число")
-        val num: Int = readln().toInt()
+        val num: Int = readLine()!!.toInt()
         if (num == 0)
             println("нулевое число")
         else {
@@ -117,17 +112,16 @@ fun Zadanie5(){
 }
 fun Zadanie6(){
     try{
-    println("Введите год")
-    val year: Int = readln().toInt()
-    if(year%100==0 && year%400==0)
-        println("Високосный")
-    else if(year%4==0 && year%100!=0)
-        println("Високосный")
-    else
-        println("невисокосный")
+        println("Введите год")
+        val year: Int = readLine()!!.toInt()
+        if(year%100==0 && year%400==0)
+            println("Високосный")
+        else if(year%4==0 && year%100!=0)
+            println("Високосный")
+        else
+            println("невисокосный")
     }
     catch(e:Exception){
         println("вы ввели не число")
     }
 }
-
